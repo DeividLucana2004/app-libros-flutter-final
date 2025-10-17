@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../providers/theme_provider.dart';
 import 'search_screen.dart';
 import 'reading_list_screen.dart';
+import 'about_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,9 +15,10 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
-  final List<Widget> _pages = [
-    const SearchScreen(),
-    const ReadingListScreen(),
+  final List<Widget> _pages = const [
+    SearchScreen(),
+    ReadingListScreen(),
+    AboutScreen(),
   ];
 
   @override
@@ -28,9 +30,8 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text("App de Libros"),
         actions: [
           IconButton(
-            icon: Icon(themeProvider.isDarkMode
-                ? Icons.light_mode
-                : Icons.dark_mode),
+            icon: Icon(
+                themeProvider.isDarkMode ? Icons.light_mode : Icons.dark_mode),
             onPressed: themeProvider.toggleTheme,
           ),
         ],
@@ -40,14 +41,9 @@ class _HomeScreenState extends State<HomeScreen> {
         currentIndex: _selectedIndex,
         onTap: (index) => setState(() => _selectedIndex = index),
         items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: "Buscar",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark),
-            label: "Mi Lista",
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Buscar"),
+          BottomNavigationBarItem(icon: Icon(Icons.bookmark), label: "Mi Lista"),
+          BottomNavigationBarItem(icon: Icon(Icons.info), label: "Acerca de"),
         ],
       ),
     );

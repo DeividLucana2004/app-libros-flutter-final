@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/reading_list_provider.dart';
+import '../screens/book_detail_screen.dart';
 
 class ReadingListScreen extends StatelessWidget {
   const ReadingListScreen({super.key});
@@ -14,9 +15,8 @@ class ReadingListScreen extends StatelessWidget {
         content: Text("¿Deseas eliminar \"${book.title}\" de tu lista?"),
         actions: [
           TextButton(
-            onPressed: () => Navigator.pop(context, false),
-            child: const Text("Cancelar"),
-          ),
+              onPressed: () => Navigator.pop(context, false),
+              child: const Text("Cancelar")),
           TextButton(
             onPressed: () => Navigator.pop(context, true),
             child: const Text("Eliminar", style: TextStyle(color: Colors.red)),
@@ -27,9 +27,8 @@ class ReadingListScreen extends StatelessWidget {
 
     if (shouldDelete == true) {
       provider.removeBook(book);
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Eliminaste "${book.title}"')),
-      );
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text('Eliminaste "${book.title}"')));
     }
   }
 
@@ -49,6 +48,14 @@ class ReadingListScreen extends StatelessWidget {
                   leading: Image.network(book.thumbnail, width: 50),
                   title: Text(book.title),
                   subtitle: Text(book.authors),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => BookDetailScreen(book: book),
+                      ),
+                    );
+                  },
                   trailing: IconButton(
                     icon: const Icon(Icons.delete, color: Colors.red),
                     onPressed: () => _confirmDelete(context, book),

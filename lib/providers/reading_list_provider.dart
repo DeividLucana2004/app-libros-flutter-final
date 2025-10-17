@@ -26,21 +26,12 @@ class ReadingListProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  // 🔹 Guarda la lista de libros localmente
   Future<void> _saveBooks() async {
     final prefs = await SharedPreferences.getInstance();
-    final data = _readingList
-        .map((b) => {
-              'id': b.id,
-              'title': b.title,
-              'authors': b.authors,
-              'thumbnail': b.thumbnail,
-            })
-        .toList();
+    final data = _readingList.map((b) => b.toJson()).toList();
     prefs.setString('readingList', json.encode(data));
   }
 
-  // 🔹 Carga la lista al iniciar la app
   Future<void> _loadBooks() async {
     final prefs = await SharedPreferences.getInstance();
     final jsonString = prefs.getString('readingList');
