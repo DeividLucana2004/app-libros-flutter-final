@@ -20,6 +20,7 @@ Aplicación móvil Flutter que consume la **API de Google Books** y permite:
 - HTTP (consumo de API)
 - SharedPreferences (almacenamiento local)
 - url_launcher (enlaces externos)
+- utilizado con git
 
 ## 📱 Capturas de pantalla
 *(Agrega aquí tus capturas reales cuando las tomes)*  
