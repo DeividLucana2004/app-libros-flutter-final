@@ -1,16 +1,37 @@
-# libros_app
+# 📚 App de Libros — Proyecto Final Flutter
 
-A new Flutter project.
+**Autor:** David Daniel Lucana Mamani  
+**Materia:** Programación Móvil II — INFocal La Paz  
+**Fecha:** Octubre 2025  
 
-## Getting Started
+## 🧾 Descripción
+Aplicación móvil Flutter que consume la **API de Google Books** y permite:
+- Buscar libros por nombre.
+- Ver detalles con descripción, calificación y enlace a Google Books.
+- Agregar y eliminar libros de una lista personal.
+- Confirmación al eliminar.
+- **Modo oscuro / claro.**
+- **Persistencia local** con SharedPreferences.
 
-This project is a starting point for a Flutter application.
+## 🧩 Tecnologías utilizadas
+- Flutter 3.x
+- Dart
+- Provider (gestión de estado)
+- HTTP (consumo de API)
+- SharedPreferences (almacenamiento local)
+- url_launcher (enlaces externos)
 
-A few resources to get you started if this is your first Flutter project:
+## 📱 Capturas de pantalla
+*(Agrega aquí tus capturas reales cuando las tomes)*  
+![Pantalla principal](screenshots/home.png)
+![Detalle del libro](screenshots/detail.png)
+![Modo oscuro](screenshots/darkmode.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 💾 Instalación del APK
+Descargar el archivo APK:  
+👉 [app_libros_final.apk](./releases/app_libros_final.apk)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🧠 Ejecución local
+```bash
+flutter pub get
+flutter run
