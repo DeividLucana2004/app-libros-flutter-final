@@ -41,13 +41,7 @@ Puedes descargar e instalar el archivo `.apk` desde el siguiente enlace:
 > 📌 *El archivo se encuentra dentro del repositorio, en la carpeta `/releases/`.  
 > Si se descarga desde PC, puede transferirse al teléfono Android para su instalación.*
 
----
 
-## 🖼️ Capturas de pantalla (opcional)
-*(Agrega tus imágenes reales o representativas)*  
-![Pantalla Principal](screenshots/home.png)  
-![Modo Oscuro](screenshots/darkmode.png)  
-![Detalles del Libro](screenshots/detail.png)
 
 ---
 
