@@ -33,10 +33,10 @@ Aplicación móvil Flutter que consume la **API de Google Books** y permite:
 
 ## 📱 Descargar APK
 
-La aplicación ya fue **compilada y probada correctamente**.  
-Puedes descargar e instalar el archivo `.apk` desde el siguiente enlace:  
+La aplicación fue **compilada y probada correctamente**.  
+Puedes descargar e instalar el archivo `.apk` desde el siguiente enlace 👇  
 
-👉 [📦 **Descargar App Libros (.apk)**](./releases/app_libros_final.apk)
+👉 [📦 **Descargar App Libros (.apk)**](./releases/app-Libro.apk)
 
 > 📌 *El archivo se encuentra dentro del repositorio, en la carpeta `/releases/`.  
 > Si se descarga desde PC, puede transferirse al teléfono Android para su instalación.*
